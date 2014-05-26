@@ -92,4 +92,10 @@ html, body {
 	width: 72%;
 }
 
+.botonera {
+	width: 30% !important;
+	height: 20px;
+}
+
 #map{min-height:100%;height:100%;}.consulta #map .leaflet-top{top:105px;}
+
