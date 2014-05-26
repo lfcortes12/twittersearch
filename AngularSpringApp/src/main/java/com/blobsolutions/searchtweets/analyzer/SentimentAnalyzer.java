@@ -1,23 +1,19 @@
 package com.blobsolutions.searchtweets.analyzer;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
-import edu.stanford.nlp.trees.Tree;
 
 public class SentimentAnalyzer {
 
 	private StanfordCoreNLP stanfordCoreNLP;
-	private List<Tree> trees;
+	//private List<Tree> trees;
 
 	public SentimentAnalyzer(StanfordCoreNLP stanfordCoreNLP) {
 		super();
-		trees = new ArrayList<Tree>();
+		//trees = new ArrayList<Tree>();
 		this.stanfordCoreNLP = stanfordCoreNLP;
 	}
 
-	public TweetWithSentiment findSentiment(String line) {
+	public Tweet findSentiment(String line) {
 
 		/*int mainSentiment = 0;
 		String sentimentAsString = "";
@@ -47,7 +43,7 @@ public class SentimentAnalyzer {
 		}
 
 		TweetWithSentiment tweetWithSentiment = new TweetWithSentiment(line, mainSentiment, sentimentAsString);*/
-		TweetWithSentiment tweetWithSentiment = new TweetWithSentiment(line, 1, "Neutral");
+		Tweet tweetWithSentiment = new Tweet(line, 1, "Neutral");
 		return tweetWithSentiment;
 
 	}

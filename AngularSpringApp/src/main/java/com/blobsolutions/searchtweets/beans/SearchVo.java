@@ -6,6 +6,7 @@ public class SearchVo {
 	private int page;
 	private int size;
 	private String lang;
+	private String since;
 
 	public String getQueryText() {
 		return queryText;
@@ -37,6 +38,14 @@ public class SearchVo {
 
 	public void setPage(int page) {
 		this.page = page;
+	}
+
+	public String getSince() {
+		return since;
+	}
+
+	public void setSince(String since) {
+		this.since = since;
 	}
 
 }

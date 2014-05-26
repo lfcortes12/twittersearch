@@ -2,7 +2,7 @@ package com.blobsolutions.searchtweets.analyzer;
 
 import java.io.Serializable;
 
-public class TweetWithSentiment implements Serializable {
+public class Tweet implements Serializable {
 
 	private static final long serialVersionUID = 5548764041487005216L;
 	
@@ -15,8 +15,12 @@ public class TweetWithSentiment implements Serializable {
 	private String lat;
 	private String lng;
 	
-	
-	public TweetWithSentiment(String tweet, int mainSentiment, String sentiment) {
+	public Tweet(String tweet) {
+		super();
+		this.tweet = tweet;
+	}
+
+	public Tweet(String tweet, int mainSentiment, String sentiment) {
 		super();
 		this.tweet = tweet;
 		this.mainSentiment = mainSentiment;

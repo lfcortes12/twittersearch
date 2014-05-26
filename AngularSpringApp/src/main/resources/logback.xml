@@ -16,5 +16,5 @@
 	</root>
 
 	<logger name="com.blobsolutions.searchtweets" level="ALL" />
-	<logger name="twitter4j" level="ALL" />
+	<logger name="twitter4j" level="INFO" />
 </configuration>
