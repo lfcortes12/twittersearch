@@ -1,6 +1,13 @@
 /* app css stylesheet */
 
-html, body { height: 100%; width: 100%; margin: 0; }.
+html, body { 
+	height: 100%;
+    margin: 0;
+    max-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    width: 100%;
+}
 
 #wrapper {
     margin: 0 auto;
