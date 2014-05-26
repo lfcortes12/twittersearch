@@ -1,14 +1,12 @@
 
 <div class="input-append">
-    <input style="width:358px; margin-left: 100px;" class="span2" type="text" ng-model="searchVo.queryText" required min="1" />
+    <input style="width:80%;  class="span2" type="text" ng-model="searchVo.queryText" required min="1" />
     <button class="btn btn-primary" ng-disabled="!searchVo.queryText || searching" ng-click="searchTweets(searchVo)" >{{searchButtonLabel}}</button>
 </div>
-
-<h3 style="margin-left:100px;">Resultados</h3>
 <div class="alert alert-info" style="width:400px;" ng-show="tweets.length == 0">
     No encontr&oacute; tweets
 </div>
-<table class="table table-bordered table-striped" style="width:450px; margin-left: 10px;" ng-show="tweets.length > 0">
+<table class="table table-bordered table-striped" style="width:90%;" ng-show="tweets.length > 0">
     <thead>
         <tr>
             <th style="text-align: center; width: 25px;">Autor</th>

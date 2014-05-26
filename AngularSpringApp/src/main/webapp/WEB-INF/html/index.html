@@ -1,33 +1,42 @@
 <!doctype html>
 <html lang="en" ng-app="searchtweets">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Service App</title>
     <link rel="stylesheet" href="resources/css/app.css"/>
+    <link rel="stylesheet" href="resources/css/ng-grid.min.css"/>
     <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css">
+    
 </head>
 <body>
-<div id="wrapper">
 
-    <!-- <ul class="menu">
-    	<li><a href="#/search">Buscar</a></li>
-        <li><a href="#/cars">Cars</a></li>
-        <li><a href="#/trains">Trains</a></li>
-        <li><a href="#/railwaystations">Railway Station</a></li>
-    </ul> -->
-    <hr class="" />
-    <div ng-view></div>
-
+<div class="container-fluid">
+<hr class="" />
+  <div class="row-fluid">
+    <div class="span4">
+      <div ng-view></div>
+    </div>
+    <div class="span8">
+     
+      <div ng-controller="GoogleMapsController">
+		    <leaflet center="bogota" layers="layers" markers="markers" style="height: 600px; position: relative; width: 86%; margin-left: 120px; "></leaflet>
+		</div>
+    </div>
+  </div>
 </div>
+
 
 <script src="resources/js/lib/angular/angular.js"></script>
 <script src="resources/js/app.js"></script>
 <script src="resources/js/services.js"></script>
-<script src="resources/js/controllers/RailwayStationController.js"></script>
-<script src="resources/js/controllers/CarController.js"></script>
-<script src="resources/js/controllers/TrainController.js"></script>
 <script src="resources/js/controllers/SearchController.js"></script>
 <script src="resources/js/filters.js"></script>
 <script src="resources/js/directives.js"></script>
+<script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
+<script src="resources/js/lib/leafletplugins/angular-leaflet-directive.min.js"></script>
+<script src="resources/js/controllers/GoogleMapsController.js"></script>
+<script src="resources/js/lib/leaflet.js"></script>
 </body>
 </html>
