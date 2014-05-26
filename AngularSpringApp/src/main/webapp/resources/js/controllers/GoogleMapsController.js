@@ -26,10 +26,8 @@ var GoogleMapsController = function($scope, $http, mySharedService) {
 	
 	$scope.bogota.lat = 4.605042;
 	$scope.bogota.lng = -74.092691;
-
-	
      
-     $scope.$on('handleBroadcast', function(event, mySharedService) {
+    $scope.$on('handleBroadcast', function(event, mySharedService) {
     	 var i = 0;
     	 $scope.bogota.lat = 4.605042;
     	 $scope.bogota.lng = -74.092691;
@@ -45,7 +43,7 @@ var GoogleMapsController = function($scope, $http, mySharedService) {
                  lng: Number(mySharedService.tweets[tweet].lng),
                  message: mySharedService.tweets[tweet].tweet
              };
-    		 console.log("Tweet: " + mySharedService.tweets[tweet].tweet);
+    		 
     		 i++;
     	 }
     	 

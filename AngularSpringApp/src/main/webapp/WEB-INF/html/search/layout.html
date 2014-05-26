@@ -1,27 +1,24 @@
-
-<div class="input-append">
-    <input style="width:80%;  class="span2" type="text" ng-model="searchVo.queryText" required min="1" />
-    <button class="btn btn-primary" ng-disabled="!searchVo.queryText || searching" ng-click="searchTweets(searchVo)" >{{searchButtonLabel}}</button>
+<div class="appContainer">
+	<div class="input-append">
+	    <input style="width:65%; class="span" type="text" ng-model="searchVo.queryText" required min="1" />
+	    <button class="btn btn-primary" ng-disabled="!searchVo.queryText || searching" ng-click="searchTweets(searchVo)" >{{searchButtonLabel}}</button>
+	</div>
+	<div class="alert alert-info alert-panel" ng-show="tweets.length == 0">
+	    No encontr&oacute; tweets
+	</div>
+	<table class="table table-bordered table-results"  ng-show="tweets.length > 0">
+	    <thead>
+	        <tr>
+	            <th style="text-align: center; width: 100%;">Tweets</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr ng-repeat="tweet in tweets">
+	            <td><b>{{tweet.source}}</b>: {{tweet.tweet}} <br/>
+	            {{tweet.date}}<br/><br/>
+	            Lat: {{tweet.lat}}<br/>
+	            Lng: {{tweet.lng}}</td>
+	        </tr>
+	    </tbody>
+	</table>
 </div>
-<div class="alert alert-info" style="width:400px;" ng-show="tweets.length == 0">
-    No encontr&oacute; tweets
-</div>
-<table class="table table-bordered table-striped" style="width:90%;" ng-show="tweets.length > 0">
-    <thead>
-        <tr>
-            <th style="text-align: center; width: 25px;">Autor</th>
-            <th style="text-align: center;">Tweet</th>
-            <th style="text-align: center;">Latitud</th>
-            <th style="text-align: center;">Longitud</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr ng-repeat="tweet in tweets">
-            <td>{{tweet.source}}</td>
-            <td>{{tweet.tweet}} <br/>
-            {{tweet.date}}</td>
-            <td>{{tweet.lat}}</td>
-            <td>{{tweet.lng}}</td>
-        </tr>
-    </tbody>
-</table>

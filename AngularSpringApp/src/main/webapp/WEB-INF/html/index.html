@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="searchtweets">
+<html lang="en" ng-app="searchtweets" class="ng-scope">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
@@ -8,35 +8,34 @@
     <link rel="stylesheet" href="resources/css/ng-grid.min.css"/>
     <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css">
+    <link rel="stylesheet" href="resources/css/jquery.mCustomScrollbar.css">
     
 </head>
 <body>
-
-<div class="container-fluid">
-<hr class="" />
-  <div class="row-fluid">
-    <div class="span4">
-      <div ng-view></div>
-    </div>
-    <div class="span8">
-     
-      <div ng-controller="GoogleMapsController">
-		    <leaflet center="bogota" layers="layers" markers="markers" style="height: 600px; position: relative; width: 86%; margin-left: 120px; "></leaflet>
+	<div class="searchWidget">
+		<div class="appHeader">
+			Busca en Twitter
 		</div>
-    </div>
-  </div>
-</div>
+		<div class="centering" ng-view ></div>
+	</div>
+
+    <div id="map" ng-controller="GoogleMapsController" style="width: 100%; height: 100%;">
+	    <leaflet center="bogota" layers="layers" markers="markers" style="width: 100%; height: 100%; position: relative;  "></leaflet>
+	</div>
 
 
-<script src="resources/js/lib/angular/angular.js"></script>
-<script src="resources/js/app.js"></script>
-<script src="resources/js/services.js"></script>
-<script src="resources/js/controllers/SearchController.js"></script>
-<script src="resources/js/filters.js"></script>
-<script src="resources/js/directives.js"></script>
-<script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
-<script src="resources/js/lib/leafletplugins/angular-leaflet-directive.min.js"></script>
-<script src="resources/js/controllers/GoogleMapsController.js"></script>
-<script src="resources/js/lib/leaflet.js"></script>
+	<script src="resources/js/lib/angular/angular.js"></script>
+	<script src="resources/js/app.js"></script>
+	<script src="resources/js/services.js"></script>
+	<script src="resources/js/controllers/SearchController.js"></script>
+	<script src="resources/js/filters.js"></script>
+	<script src="resources/js/directives.js"></script>
+	<script src="resources/js/lib/leaflet/angular-leaflet-directive.min.js"></script>
+	<script src="resources/js/controllers/GoogleMapsController.js"></script>
+	<script src="resources/js/lib/leaflet/leaflet.js"></script>
+	<script src="resources/js/lib/jquery/jquery.min.js"></script>
+	<script src="resources/js/lib/jquery/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="http://tombatossals.github.io/angular-leaflet-directive/js/angular-leaflet-directive-webpage.min.js"></script>
+	
 </body>
 </html>

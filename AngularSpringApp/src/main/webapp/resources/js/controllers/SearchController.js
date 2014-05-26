@@ -15,7 +15,12 @@ var SearchController = function($scope, $http, mySharedService) {
         	$scope.searchButtonLabel = "Buscar";
         	$scope.searching = false;
             $scope.tweets = tweetList;
-            mySharedService.message = 'hola';
+            
+            $(".table-results").mCustomScrollbar({
+                theme:"3d-thick-dark"
+            });
+    	
+            mySharedService.message = 'success';
             mySharedService.tweets = tweetList;
             mySharedService.prepForBroadcast('hola', tweetList);
             $scope.$emit('handleBroadcast', mySharedService);
