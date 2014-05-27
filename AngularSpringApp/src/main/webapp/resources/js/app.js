@@ -2,7 +2,7 @@
 
 var AngularSpringApp = {};
 
-var App = angular.module('searchtweets', ['searchtweets.filters', 'searchtweets.services', 'searchtweets.directives', 'leaflet-directive', 'ngCsv', 'ngSanitize']);
+var App = angular.module('searchtweets', ['ngRoute',  'ngCsv', 'ngSanitize', 'searchtweets.filters', 'searchtweets.services', 'searchtweets.directives', 'leaflet-directive']);
 
 App.factory('mySharedService', function($rootScope) {
     var sharedService = {};
@@ -34,5 +34,3 @@ App.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.otherwise({redirectTo: '/search'});
 }]);
 
-//SearchController.$inject = ['$scope', 'mySharedService'];
-//GoogleMapsController.$inject = ['$scope', 'mySharedService'];
