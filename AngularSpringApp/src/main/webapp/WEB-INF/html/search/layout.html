@@ -22,7 +22,7 @@
 	    </tbody>
 	</table>
 	<div class="botonera pull-right" ng-show="tweets.length > 0">
-		<button type="button" class="btn btn-primary btn-lg" >
+		<button type="button" class="btn btn-primary btn-lg" ng-csv="getArray()" filename="test.csv">
 		  <span class="glyphicon glyphicon-download"></span> Excel
 		</button>
 	</div>

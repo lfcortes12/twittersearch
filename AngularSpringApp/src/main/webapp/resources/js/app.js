@@ -2,7 +2,7 @@
 
 var AngularSpringApp = {};
 
-var App = angular.module('searchtweets', ['searchtweets.filters', 'searchtweets.services', 'searchtweets.directives', 'leaflet-directive']);
+var App = angular.module('searchtweets', ['searchtweets.filters', 'searchtweets.services', 'searchtweets.directives', 'leaflet-directive', 'ngCsv', 'ngSanitize']);
 
 App.factory('mySharedService', function($rootScope) {
     var sharedService = {};
